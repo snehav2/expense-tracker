@@ -258,7 +258,7 @@ section .subheader {
   cursor: pointer;
   opacity: 0.5;
 }
-/* 
+
 .card-container {
     display: flex;
     overflow: hidden;
@@ -281,7 +281,7 @@ section .subheader {
 
 button #prev, #next {
     margin: 10px;
-} */
+}
 /*for feature*/
 section.bg-white h2,
 section.bg-grey h2 {
