@@ -349,8 +349,16 @@ main .calc{
     margin-bottom: 20px;
 }
 
-.friend, .group {
+.friends, .group {
     margin-bottom: 8px;
+}
+.friends{
+    background:bvar(--color-white);
+    padding:var(--card-padding);
+    border-radius:var(--card-border-radius);
+    margin-top:1rem;
+    box-shadow:var(--box-shadow);
+    transition:all 300ms ease;
 }
 .right{
     margin-top:1.4rem;
@@ -393,4 +401,49 @@ main .calc{
     display:flex;
     gap:2rem;
     text-align:right;
+}
+/*right end category*/
+
+.right .sales-analytics .items{
+    background:var(--color-white);
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    margin-bottom:0.7rem;
+    padding:1.4rem var(--color-padding);
+    border-radius:var(--border-radius-3);
+    box-shadow:var(--box-shadow);
+    transition:all 300ms ease;
+
+}
+
+.right .sales-analytics .items:hover{
+    box-shadow:none;
+
+
+}
+
+.right .sales-analytics .items .right{
+    display:flex;
+    justify-content:space-between;
+    align-items:start;
+    margin:0;
+    width:100%;
+
+
+
+}   
+.right .sales-analytics .items .icon{
+    padding:0.6rem;
+    color:var(--color-white);
+    border-radius:50%;
+    background:rgb(222, 212, 248);
+    display:flex;
+
+
+}
+
+
+.right .sales-analytics .item.offline{
+    
 }
