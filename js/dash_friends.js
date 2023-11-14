@@ -1,6 +1,6 @@
 var friends = [];
     var selectedFriends = [];
-    var expenses = [];
+    var group_expenses = [];
 
     function addFriend() {
         var friendName = document.getElementById('friendName').value;
@@ -44,24 +44,24 @@ var friends = [];
             return;
         }
 
-        expenses.push({
+        group_expenses.push({
             friend: selectedFriend,
             category: expenseCategory,
             amount: expenseAmount
         });
 
-        displayExpenses();
+        displaygroup_expenses();
         document.getElementById('expenseCategory').value = '';
         document.getElementById('expenseAmount').value = '';
     }
 
-    function displayExpenses() {
-        var expensesList = document.getElementById('expensesList');
-        expensesList.innerHTML = '';
+    function displaygroup_expenses() {
+        var group_expensesList = document.getElementById('group_expensesList');
+        group_expensesList.innerHTML = '';
 
-        expenses.forEach(function (expense) {
+        group_expenses.forEach(function (expense) {
             var expenseElement = document.createElement('div');
             expenseElement.textContent = expense.friend + ': ' + expense.category + ' - $' + expense.amount;
-            expensesList.appendChild(expenseElement);
+            group_expensesList.appendChild(expenseElement);
         });
     }

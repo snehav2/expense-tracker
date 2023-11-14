@@ -112,3 +112,18 @@ function displayExpensesByCategory(expenses) {
 
 // Call the function with your expenses data
 displayExpensesByCategory(expenses);
+function calculateCategoryTotal(category) {
+    return expenses.filter(expense => expense.category === category)
+        .reduce((total, expense) => total + expense.amount, 0);
+}
+
+function updateCategorySelect(categories) {
+    categorySelect.innerHTML = '<option value="" selected disabled>Select category</option>';
+
+    for (const category of categories) {
+        const option = document.createElement('option');
+        option.value = category;
+        option.textContent = category;
+        categorySelect.appendChild(option);
+    }
+}
