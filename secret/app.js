@@ -107,6 +107,7 @@ app.post('/split',function(request,response){
 })
 app.post('transactions',function(request,response){
     return response.render("transactions")
+    response.redirect("transactions");
 })
 // app.post('/secrets', async (req, res) => {
 //     const { dropdown1, dropdown2, date, number } = req.body;
