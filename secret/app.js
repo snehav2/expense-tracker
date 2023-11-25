@@ -80,7 +80,7 @@ app.get("/register",function(request,response){
     response.redirect('/secrets');
 });
 // app.get("/secrets",function(request,response){
-//     response.render("secrets");
+//     response.render("split");
 // });
 
 app.post("/secrets", async(request,response)=>{
@@ -98,6 +98,10 @@ app.post("/secrets", async(request,response)=>{
         return response.status(500).send("error");
     }
 });
+
+app.post('/split',async(request,response)=>{
+    return response.render("split");
+})
 // app.post('/secrets', async (req, res) => {
 //     const { dropdown1, dropdown2, date, number } = req.body;
   
