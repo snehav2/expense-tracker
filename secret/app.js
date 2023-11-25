@@ -79,6 +79,9 @@ app.get("/register",function(request,response){
     response.render("register");
     response.redirect('/secrets');
 });
+app.get("/transactions",function(request,response){
+    return response.render("transactions")
+})
 // app.get("/secrets",function(request,response){
 //     response.render("split");
 // });
@@ -99,8 +102,11 @@ app.post("/secrets", async(request,response)=>{
     }
 });
 
-app.post('/split',async(request,response)=>{
+app.post('/split',function(request,response){
     return response.render("split");
+})
+app.post('transactions',function(request,response){
+    return response.render("transactions")
 })
 // app.post('/secrets', async (req, res) => {
 //     const { dropdown1, dropdown2, date, number } = req.body;
