@@ -75,6 +75,17 @@ app.get("/",function(request,response){
     response.render("home");
 });
 
+app.get("/contact",function(request,response){
+    response.render("contact");
+});
+app.get("/about",function(request,response){
+    response.render("about");
+});
+// for split button
+app.get("/split",function(request,response){
+    response.render("split");
+});
+
 app.get("/register",function(request,response){
     response.render("register");
     response.redirect('/secrets');
